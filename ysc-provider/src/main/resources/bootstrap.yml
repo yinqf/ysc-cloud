@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: ysc-provider
+  profiles:
+    active: dev
+  cloud:
+      config:
+          label: master
+          name: author
+          discovery:
+            service-id: ysc-config
+            enabled: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7000/eureka/
+server:
+  port: 7100

@@ -1,0 +1,15 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7000/eureka/
+spring:
+  cloud:  
+    config:  
+      server:  
+        git:  
+          uri: https://gitee.com/yinqf/spring-cloud-config.git
+          search-paths: demo-dev
+  application:
+      name: ysc-config
+server:  
+    port: 7400
